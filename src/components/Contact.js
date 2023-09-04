@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Row, Container, Col } from "react-bootstrap";
-import imgContact from "../assets/img/contact-4.svg";
+import imgContact from "../assets/img/contact.svg";
+import emailjs from "@emailjs/browser";
 
-export const Conctact = () => {
+export const Contact = () => {
   const formInitialDetails = {
     firstName: "",
     lastName: "",
@@ -12,8 +13,9 @@ export const Conctact = () => {
   };
 
   const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState("Send");
   const [status, setStatus] = useState({});
+
+  const form = useRef();
 
   const onFormUpdate = (category, value) => {
     setFormDetails({
@@ -24,26 +26,28 @@ export const Conctact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setButtonText("Sending...");
-    let respose = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "Application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    });
-    setButtonText("Send");
-    let result = await respose.json();
-    setFormDetails(formInitialDetails);
-    if (result.code === 200) {
-      setStatus({ success: true, message: "Message sent successfully" });
-    } else {
-      setStatus({
-        success: false,
-        message: "Something went wrong, please try again later.",
-      });
-    }
+    emailjs
+      .sendForm(
+        "service_0ta8chj",
+        "template_1lkmzhl",
+        form.current,
+        "UlLJLyUDPcsryrdgH"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setStatus({ succes: true, message: "Message sent successfully" });
+        },
+        (error) => {
+          console.log(error.text);
+          setStatus({
+            succes: false,
+            message: "Something went wrong, please try again later.",
+          });
+        }
+      );
   };
+
   return (
     <section className="contact" id="connect">
       <Container>
@@ -53,13 +57,14 @@ export const Conctact = () => {
           </Col>
           <Col md={6}>
             <h2>Connect with me</h2>
-            <form onSubmit={handleSubmit}>
+            <form ref={form} onSubmit={handleSubmit}>
               <Row>
                 <Col sm={6} className="px-1">
                   <input
                     type="text"
                     value={formDetails.firstName}
                     placeholder="First Name"
+                    name="firstName"
                     onChange={(e) => onFormUpdate("firstName", e.target.value)}
                     required
                   ></input>
@@ -69,6 +74,7 @@ export const Conctact = () => {
                     type="text"
                     value={formDetails.lastName}
                     placeholder="Last Name"
+                    name="lastName"
                     onChange={(e) => onFormUpdate("lastName", e.target.value)}
                     required
                   ></input>
@@ -78,6 +84,7 @@ export const Conctact = () => {
                     type="email"
                     value={formDetails.email}
                     placeholder="Email Address"
+                    name="email"
                     onChange={(e) => onFormUpdate("email", e.target.value)}
                     required
                   ></input>
@@ -87,6 +94,7 @@ export const Conctact = () => {
                     type="tel"
                     value={formDetails.phone}
                     placeholder="Phone No."
+                    name="phone"
                     onChange={(e) => onFormUpdate("phone", e.target.value)}
                   ></input>
                 </Col>
@@ -95,11 +103,12 @@ export const Conctact = () => {
                     row="6"
                     value={formDetails.message}
                     placeholder="Message"
+                    name="message"
                     onChange={(e) => onFormUpdate("message", e.target.value)}
                     required
                   />
                   <button type="submit">
-                    <span>{buttonText}</span>
+                    <span>Send</span>
                   </button>
                 </Col>
                 {status.message && (
