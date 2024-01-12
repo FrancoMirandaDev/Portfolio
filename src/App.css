@@ -262,7 +262,7 @@ nav.navbar {
     color: #b8b8b8;
     font-size: 18px;
     letter-spacing: 0.8px;
-    line-height: 1.5em;
+    line-height: 1.8em;
     width: 96%;
 }
 .banner button {
@@ -299,6 +299,12 @@ nav.navbar {
         transform: translateY(-20px)
     }
 }
+
+.banner .wrap {
+    display: inline-block;
+    width: 100%;
+}
+
 .txt-rotate > .wrap {
     border-right: 0.08em solid #666;
 }

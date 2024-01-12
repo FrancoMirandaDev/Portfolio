@@ -57,7 +57,7 @@ export const Projects = () => {
                   }
                 >
                   <h2>Projects</h2>
-                  <p>These are a few projects that I have worked on</p>
+                  <p>View of projects that showcase my abilities</p>
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav
                       variant="pills"

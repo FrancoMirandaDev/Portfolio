@@ -66,7 +66,7 @@ export const Banner = () => {
                     <span className="wrap">{text}</span>
                   </h1>
                   <p>
-                    I am Full Stack Developer with over 1 year of experience in
+                    I am Full Stack Developer with over 2 year of experience in
                     web development and a solid background in Computer
                     Engineering.
                     <br />I am actively seeking opportunities to effectively

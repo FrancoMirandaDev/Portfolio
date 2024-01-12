@@ -29,7 +29,7 @@ export const Skills = () => {
               {({ isVisible }) => (
                 <div
                   className={
-                    isVisible ? "animate__animated animate__backInLeft" : ""
+                    isVisible ? "animate__animated  animate__rubberBand " : ""
                   }
                 >
                   <div className="skill-bx">
@@ -56,7 +56,14 @@ export const Skills = () => {
                         { img: Img10, title: "Git" },
                         { img: Img15, title: "Docker" },
                       ].map((item, index) => (
-                        <Col key={index} className="item">
+                        <Col
+                          key={index}
+                          className={
+                            isVisible
+                              ? "animate__animated animate__pulse animate__repeat-3 animate__delay-1s animate__slow"
+                              : ""
+                          }
+                        >
                           <img src={item.img} alt={item.title} />
                           <h5 className="title">{item.title} </h5>
                         </Col>
