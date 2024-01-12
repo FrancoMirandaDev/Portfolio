@@ -70,9 +70,6 @@ export const Projects = () => {
                       <Nav.Item>
                         <Nav.Link eventKey="second">Tab Two</Nav.Link>
                       </Nav.Item>
-                      <Nav.Item>
-                        <Nav.Link eventKey="third">Tab Three</Nav.Link>
-                      </Nav.Item>
                     </Nav>
                     <TabContent>
                       <Tab.Pane eventKey="first">
@@ -83,9 +80,6 @@ export const Projects = () => {
                         </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
-                        This section is currently in progress.
-                      </Tab.Pane>
-                      <Tab.Pane eventKey="third">
                         This section is currently in progress.
                       </Tab.Pane>
                     </TabContent>

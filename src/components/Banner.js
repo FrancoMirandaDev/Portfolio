@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Container, Col, Row } from "react-bootstrap";
 import headerimg from "../assets/img/header-img.svg";
 import { ArrowRightCircle } from "react-bootstrap-icons";
-import Cv from "../assets/doc/Cv_Franco_Miranda.pdf";
+import Cv from "../assets/doc/Cv_Franco_Miranda(ENG).pdf";
 
 import TrackVisibility from "react-on-screen";
 import "animate.css";
@@ -66,13 +66,14 @@ export const Banner = () => {
                     <span className="wrap">{text}</span>
                   </h1>
                   <p>
-                    I am a computer engineering student with a strong passion
-                    for programming and a deep commitment to continuous
-                    learning. I am actively seeking opportunities to effectively
+                    I am Full Stack Developer with over 1 year of experience in
+                    web development and a solid background in Computer
+                    Engineering.
+                    <br />I am actively seeking opportunities to effectively
                     showcase both my technical expertise and my interpersonal
                     skills.
                   </p>
-                  <a href={Cv} download>
+                  <a href={Cv} download="CV_Franco_Miranda.pdf">
                     <button
                       className={
                         isVisible

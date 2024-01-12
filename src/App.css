@@ -144,7 +144,7 @@ nav.navbar {
       transform: scale(1);
   }
   .social-icon a img {
-      width: 40%;
+      width: 65%;
       z-index: 1;
       transition: 0.3s ease-in-out;
   }
@@ -235,8 +235,8 @@ nav.navbar {
   /****************** Banner Css *****************/
 
  .banner {
-    margin-top: 0;
-    padding: 260px 0 100px 0;
+    margin-top: 13em;
+    padding: 0 0 100px 0;
     
  }
  .banner .tagline {
@@ -314,8 +314,8 @@ nav.navbar {
     background: #151515;
     border-radius: 64px;
     text-align: center;
-    padding: 60px 50px;
-    margin-top: -60px;
+    padding: 120px 50px;
+    margin-top: 2em;
 }
 .skill h2 {
     font-size: 45px;
@@ -330,17 +330,47 @@ nav.navbar {
     margin: 14px 0 75px 0;
 }
 
-.skill-slider {
-    width: 80%;
-    margin: 0 auto;
-    position: relative;
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.items img {
+    width: 100px;
 }
 
-.skill-slider .item img {
-    width: 50%;
-    margin: 0 auto 15px auto;
+.item {
+    /*flex: 0 0 calc(33.333% - 2.4em); /* Ajustar según el número de elementos por fila */
+    /*max-width: calc(33.333% - 2.4em); /* Ajustar según el número de elementos por fila */
+    /*width: 100%;
+    max-width: 100%;*/
+    padding: 1.2em;
 }
 
+.title {
+    text-align: center;
+    font-size: medium;
+    font-weight: 700;
+    margin: 1.2em 0 0.6em 0;
+    color: #ffffff;
+    border: #4A2FBD 1px solid;
+    padding: 0.5em;
+    border-radius: 10px;
+
+}
+/*
+@media (max-width: 768px) {
+    .items {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .item {
+        width: 50%;
+    }
+}
+*/
 /************ Projects Css ************/
 
 .project {
@@ -376,7 +406,7 @@ nav.navbar {
   overflow: hidden;
 }
 .project .nav.nav-pills .nav-item {
-  width: 33.33333%;
+  width: 50%;
 }
 .project .nav.nav-pills .nav-link {
   background-color: transparent;
