@@ -5,6 +5,7 @@ import { Skills } from "./components/Skills.js";
 import { Projects } from "./components/Projects.js";
 import { Contact } from "./components/Contact.js";
 import { Footer } from "./components/Footer.js";
+import { Analytics } from "@vercel/analytics/react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -17,6 +18,7 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
+      <Analytics />
     </div>
   );
 }
