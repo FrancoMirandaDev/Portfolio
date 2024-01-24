@@ -48,6 +48,11 @@ export const Banner = () => {
     }
   };
 
+  const onButtonClick = () => {
+    // using Java Script method to get PDF file
+    window.open(Cv, "_blank");
+  };
+
   return (
     <section className="banner" id="home">
       <Container>
@@ -80,6 +85,7 @@ export const Banner = () => {
                           ? "animate__animated animate__headShake animate__delay-2s animate__infinite"
                           : ""
                       }
+                      onClick={onButtonClick}
                     >
                       Download CV
                     </button>
