@@ -458,6 +458,12 @@ nav.navbar {
   border-radius: 0 55px 55px 0;
 }
 
+.proj-item h6 {
+  font-size: 18px;
+  line-height: 1.5em;
+  padding-bottom: 10px;
+}
+
 .proj-imgbx a{
   padding: 50px;
 }
@@ -467,7 +473,17 @@ nav.navbar {
   border-radius: 30px;
   overflow: hidden;
   margin-bottom: 24px;
+  height: 250px;
+  
 }
+
+.proj-imgbx img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* or object-fit: contain; depending on your preference */
+
+  }
+
 .proj-imgbx::before {
   content: "";
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);

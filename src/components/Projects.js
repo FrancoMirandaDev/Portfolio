@@ -6,6 +6,7 @@ import projImg2 from "../assets/img/Calzado-App.png";
 import projImg3 from "../assets/img/Presupuestos.png";
 import projImg4 from "../assets/img/Conctacts-app.png";
 import projImg5 from "../assets/img/Store-Pc.png";
+import projImg6 from "../assets/img/Store-Pc-3.png";
 
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -13,12 +14,20 @@ import TrackVisibility from "react-on-screen";
 export const Projects = () => {
   const projects = [
     {
+      title: "Shop Pc (Server)",
+      category: "Javascript + Node.Js + Express + SQL",
+      link: "https://github.com/FrancoMirandaDev/Shop-Pc-BackEnd",
+      imgUrl: projImg6,
+      description:
+        "Back end server for the ecommerce,  enabling user validation and storage users data in a database.Additionally, Validate your transactions with Mercado Pago or Stripe",
+    },
+    {
       title: "Shop Pc",
-      category: "TypeScript + React Js + Bootstrap + React Hooks",
+      category: "TypeScript + React Js + Bootstrap + SQL",
       link: "https://github.com/FrancoMirandaDev/Shop-Pc-FrontEnd",
       imgUrl: projImg5,
       description:
-        "Eccommerce web application connects with a payment gateway such as Stripe and Mercado Pago,allowing purchase products with a credit card",
+        "Ecommerce web application connects with a payment gateway such as Stripe and Mercado Pago,allowing purchase products with a credit card",
     },
     {
       title: "Task List",
