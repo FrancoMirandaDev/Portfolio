@@ -458,6 +458,10 @@ nav.navbar {
   border-radius: 0 55px 55px 0;
 }
 
+.proj-imgbx a{
+  padding: 50px;
+}
+
 .proj-imgbx {
   position: relative;
   border-radius: 30px;

@@ -5,12 +5,21 @@ import projImg1 from "../assets/img/Task-List.png";
 import projImg2 from "../assets/img/Calzado-App.png";
 import projImg3 from "../assets/img/Presupuestos.png";
 import projImg4 from "../assets/img/Conctacts-app.png";
+import projImg5 from "../assets/img/Store-Pc.png";
 
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 
 export const Projects = () => {
   const projects = [
+    {
+      title: "Shop Pc",
+      category: "TypeScript + React Js + Bootstrap + React Hooks",
+      link: "https://github.com/FrancoMirandaDev/Shop-Pc-FrontEnd",
+      imgUrl: projImg5,
+      description:
+        "Eccommerce web application connects with a payment gateway such as Stripe and Mercado Pago,allowing purchase products with a credit card",
+    },
     {
       title: "Task List",
       category: "Node.Js + MongoDB + Html,Css,Javascript",
