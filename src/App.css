@@ -480,7 +480,8 @@ nav.navbar {
 .proj-imgbx img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* or object-fit: contain; depending on your preference */
+    object-fit: scale-down;
+    object-position: top;
 
   }
 

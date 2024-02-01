@@ -15,6 +15,7 @@ import Img12 from "../assets/img/mysql.svg";
 import Img13 from "../assets/img/postgresql.svg";
 import Img14 from "../assets/img/redux.svg";
 import Img15 from "../assets/img/docker.svg";
+import Img16 from "../assets/img/aws.svg";
 
 import TrackVisibility from "react-on-screen";
 import "animate.css";
@@ -55,6 +56,7 @@ export const Skills = () => {
                         { img: Img13, title: "PostgreSQL" },
                         { img: Img10, title: "Git" },
                         { img: Img15, title: "Docker" },
+                        { img: Img16, title: "AWS" },
                       ].map((item, index) => (
                         <Col
                           key={index}
