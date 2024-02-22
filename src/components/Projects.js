@@ -15,7 +15,8 @@ export const Projects = () => {
   const projects = [
     {
       title: "Shop Pc (Server)",
-      category: "Javascript + Node.Js + Express + SQL",
+      category:
+        "Javascript + Node.Js + Express + SQL + Swagger + Stripe + Mercado Pago",
       link: "https://github.com/FrancoMirandaDev/Shop-Pc-BackEnd",
       imgUrl: projImg6,
       description:
@@ -23,7 +24,8 @@ export const Projects = () => {
     },
     {
       title: "Shop Pc",
-      category: "TypeScript + React Js + Bootstrap + SQL",
+      category:
+        "TypeScript + React Js + Bootstrap + SQL + Stripe + Mercado Pago",
       link: "https://github.com/FrancoMirandaDev/Shop-Pc-FrontEnd",
       imgUrl: projImg5,
       description:
