@@ -7,6 +7,7 @@ import projImg3 from "../assets/img/Presupuestos.png";
 import projImg4 from "../assets/img/Conctacts-app.png";
 import projImg5 from "../assets/img/Store-Pc.png";
 import projImg6 from "../assets/img/Store-Pc-3.png";
+import projImg7 from "../assets/img/ChatBot-IA.png";
 
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -14,9 +15,17 @@ import TrackVisibility from "react-on-screen";
 export const Projects = () => {
   const projects = [
     {
+      title: "ChatBot with IA",
+      category:
+        "JavaScript + TypeScript + Node.Js + React Js + Gemini AI + Docker",
+      link: "https://github.com/FrancoMirandaDev/ChatBot-with-IA",
+      imgUrl: projImg7,
+      description: "A chatbot that responds to user questions with an AI",
+    },
+    {
       title: "Shop Pc (Server)",
       category:
-        "Javascript + Node.Js + Express + SQL + Swagger + Stripe + Mercado Pago",
+        "JavaScript + Node.Js + Express + SQL + Swagger + Stripe + Mercado Pago",
       link: "https://github.com/FrancoMirandaDev/Shop-Pc-BackEnd",
       imgUrl: projImg6,
       description:
@@ -48,20 +57,22 @@ export const Projects = () => {
         "Web application that allows you to view the prices of the shoes in various stores",
     },
     {
-      title: "Presupuesto",
-      category: "Html + Css + Javascript",
-      link: "https://github.com/FrancoMirandaDev/Presupuestos",
-      imgUrl: projImg3,
-      description:
-        "Web application that allows you to keep an accounting record of the income and expenditure of money",
-    },
-    {
       title: "Contacts App",
       category: "Python + SQL + Html,Css,Javascript",
       link: "https://github.com/FrancoMirandaDev/Contacts-app",
       imgUrl: projImg4,
       description:
         "Web application that allows you to save data such as Name,Telephone and Email in a Database",
+    },
+  ];
+  const projects2 = [
+    {
+      title: "Presupuesto",
+      category: "Html + Css + Javascript",
+      link: "https://github.com/FrancoMirandaDev/Presupuestos",
+      imgUrl: projImg3,
+      description:
+        "Web application that allows you to keep an accounting record of the income and expenditure of money",
     },
   ];
   return (
@@ -102,7 +113,11 @@ export const Projects = () => {
                         </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
-                        This section is currently in progress.
+                        <Row>
+                          {projects2.map((project, index) => {
+                            return <ProjectCard key={index} {...project} />;
+                          })}
+                        </Row>
                       </Tab.Pane>
                     </TabContent>
                   </Tab.Container>
