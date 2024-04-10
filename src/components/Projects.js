@@ -8,6 +8,7 @@ import projImg4 from "../assets/img/Conctacts-app.png";
 import projImg5 from "../assets/img/Store-Pc.png";
 import projImg6 from "../assets/img/Store-Pc-3.png";
 import projImg7 from "../assets/img/ChatBot-IA.png";
+import projImg8 from "../assets/img/Payments-App.png"
 
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -21,6 +22,14 @@ export const Projects = () => {
       link: "https://github.com/FrancoMirandaDev/ChatBot-with-IA",
       imgUrl: projImg7,
       description: "A chatbot that responds to user questions with an AI",
+    },
+    {
+      title: "Banking Payments Management",
+      category: "JavaScript, NodeJs, Express + React, Next, Tailwind Css + PostgreSQL, Jest",
+      link: "https://github.com/FrancoMirandaDev/Payments-app",
+      imgUrl: projImg8,
+      description:
+        "The website facilitates registering, managing, and querying customer banking payments, with secure CRUD features and filtering/search options for efficient information handling.",
     },
     {
       title: "Shop Pc (Server)",
@@ -56,6 +65,8 @@ export const Projects = () => {
       description:
         "Web application that allows you to view the prices of the shoes in various stores",
     },
+  ];
+  const projects2 = [
     {
       title: "Contacts App",
       category: "Python + SQL + Html,Css,Javascript",
@@ -64,8 +75,6 @@ export const Projects = () => {
       description:
         "Web application that allows you to save data such as Name,Telephone and Email in a Database",
     },
-  ];
-  const projects2 = [
     {
       title: "Presupuesto",
       category: "Html + Css + Javascript",
@@ -85,7 +94,7 @@ export const Projects = () => {
                 <div
                   className={
                     isVisible
-                      ? "animate__animated animate__fadeIn animate__slow"
+                      ? "animate__animated animate__pulse animate__slow animate__repeat-2"
                       : ""
                   }
                 >
