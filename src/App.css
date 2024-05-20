@@ -317,8 +317,13 @@ nav.navbar {
 }
 
 .skill-bx {
-    background: #151515;
-    border-radius: 64px;
+/*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=010101&c2=1e0348&gt=r&gd=dtr
+*/
+background: #010101;
+background: radial-gradient(at center 1000%, #4A2FBD, #010101);
+border-radius: 64px;
     text-align: center;
     padding: 120px 50px;
     margin-top: 2em;
